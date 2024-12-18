@@ -34,7 +34,7 @@ def main():
         years = csv.columns[1:].values
         years = [int(year) for year in years if int(year) <= 2050]
 
-        country_1 = "Belgium"
+        country_1 = "Spain"
         country_2 = "France"
         c1_row = csv.loc[csv["country"] == country_1].values[0][1:len(years)+1]
         c2_row = csv.loc[csv["country"] == country_2].values[0][1:len(years)+1]
@@ -47,6 +47,7 @@ def main():
         y_max = max(max(c1_row), max(c2_row))
         y_range = range(0, int(y_max), 20_000_000)
 
+        plt.gcf().canvas.manager.set_window_title("Compare My Country")
         plt.yticks(y_range, [f"{i//1_000_000}M" for i in y_range])
         plt.xticks(range(min(years), max(years)+1, 40))
         plt.legend(loc='lower right')

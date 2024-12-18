@@ -17,6 +17,7 @@ def main():
         country = "Spain"
         row_country = csv.loc[csv["country"] == f"{country}"].values[0][1:]
 
+        plt.gcf().canvas.manager.set_window_title("Draw My Country")
         plt.plot(years, row_country)
         plt.title(f"{country} Life expectancy Projections")
         plt.xticks(range(min(years), max(years)+1, 40))

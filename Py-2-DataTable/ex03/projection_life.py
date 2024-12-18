@@ -33,6 +33,7 @@ def main():
         covert_num(years)
         covert_num(gdp)
 
+        plt.gcf().canvas.manager.set_window_title("Draw My Year")
         plt.scatter(gdp, years, marker='o')
         plt.xscale('log')
         plt.xticks([300, 1000, 10000], ['300', '1k', '10k'])
