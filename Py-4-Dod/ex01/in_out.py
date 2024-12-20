@@ -23,6 +23,6 @@ def outer(x: int | float, function) -> object:
         """
 
         nonlocal count
-        count = function(count if count > 0 else x)
+        count = function(count or x)
         return count
     return inner

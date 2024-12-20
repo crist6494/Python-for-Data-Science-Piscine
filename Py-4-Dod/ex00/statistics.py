@@ -2,7 +2,8 @@ from typing import Any
 
 
 def ft_statistics(*args: Any, **kwargs: Any) -> None:
-    """Function to calculate the mean, median, quartile, 
+
+    """Function to calculate the mean, median, quartile,
         variance and standard deviation of a list of numbers
     """
 
